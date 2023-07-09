@@ -1,0 +1,10 @@
+1 roda a app
+2 atribui o code changed ao curl abaixo
+curl --location 'http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/auth?response_type=code&
+client_id=photo-app-pkce&state=hv8hf0h2i7d&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2Fcallback&
+code_challenge=HYRt2YVzWN_oj6P0Ct6Jm2bef8f-465j6LCSVnyUJIc&code_challenge_method=S256&scope=openid' \
+3 faz a requisicao, e pega o code na url E COM O CODE_VERIFIER MONTA esta requisicao
+curl --location 'http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Cookie: AUTH_SESSION_ID=70104191-3895-49f3-ae59-72804d0f8110; AUTH_SESSION_ID_LEGACY=70104191-3895-49f3-ae59-72804d0f8110; KC_RESTART=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4NjY3MjBjMy1kODc5LTQ1MDMtYTJlMy1kOTk1NmI3ZDYwZGEifQ.eyJjaWQiOiJwaG90by1hcHAtcGtjZSIsInB0eSI6Im9wZW5pZC1jb25uZWN0IiwicnVyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4Ni9jYWxsYmFjayIsImFjdCI6IkFVVEhFTlRJQ0FURSIsIm5vdGVzIjp7InNjb3BlIjoib3BlbmlkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9hcHBzZGV2ZWxvcGVyYmxvZyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwiY29kZV9jaGFsbGVuZ2VfbWV0aG9kIjoiUzI1NiIsInJlZGlyZWN0X3VyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4Ni9jYWxsYmFjayIsInN0YXRlIjoiaHY4aGYwaDJpN2QiLCJjb2RlX2NoYWxsZW5nZSI6IlRmRnNpU1ZCeEVXUDZhcFJIYWN1dlJMaUxENi1QSHB2VXdIaTV6NXFEOEEifX0.vqceTG-3hACPfTDbaMVBgnPS_Cps8Be99QRBZjEy768; JSESSIONID=AFE066252D40368829403038E96983D7' \
+4 
